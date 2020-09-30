@@ -79,6 +79,20 @@ tr:nth-child(even) {
     }
   </script>
   
+  <p>Novac<p>
+  <input type="text" id="HRK" value="0"><br><br>
+  <button onclick="HRKuDOL()">Mbgu2</button>
+   
+  <h3>DOLARI:</h3>
+  
+  <p id="DOL"></p>
+  
+  <script>
+    function HRKuDOL(){
+      var HRK = Number(document.getElementById("HRK").value);
+      document.getElementById("EUR").innerHTML=String(HRK/6.45);
+    }
+  </script>
   
 
 <p>Link za sljdeču stranicu na kojoj možeze vidjeti životinje</p>
