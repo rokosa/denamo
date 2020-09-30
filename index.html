@@ -61,9 +61,28 @@ tr:nth-child(even) {
   </tr>
  
 </table>
+  
+  
+  
+  <p>Upis Količine novca<p>
+  <input type="text" id="HRK" value="100"><br><br>
+  <button onclick="HRKuEUR()">Izračunaj</button>
+   
+  <h3>EUR:</h3>
+  
+  <p id="EUR"></p>
+  
+  <script>
+    function HRKuEUR(){
+      var HRK = Number(document.getElementById("HRK").value);
+      document.getElementById("EUR").innerHTML=String(HRK/7.56);
+  </script>
+  
+  
 
 <p>Link za sljdeču stranicu na kojoj možeze vidjeti životinje</p>
 <a href="https://rokosa.github.io/divlje-svinjwe/">divljikolači</a>
+  
 
 </body>
 </html>
