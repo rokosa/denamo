@@ -86,8 +86,59 @@ function drop(ev) {
     
 </style>
   
+<style>
+#navlist {
+  position: relative;
+}
+
+#navlist li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 0;
+}
+
+#navlist li, #navlist a {
+  height: 44px;
+  display: block;
+}
+
+#home {
+  left: 0px;
+  width: 46px;
+  background: url('img_navsprites_hover.gif') 0 0;
+}
+
+#prev {
+  left: 63px;
+  width: 43px;
+  background: url('img_navsprites_hover.gif') -47px 0;
+}
+
+#next {
+  left: 129px;
+  width: 43px;
+  background: url('img_navsprites_hover.gif') -91px 0;
+}
+
+#home a:hover {
+  background: url('img_navsprites_hover.gif') 0 -45px;
+}
+
+#prev a:hover {
+  background: url('img_navsprites_hover.gif') -47px -45px;
+}
+
+#next a:hover {
+  background: url('img_navsprites_hover.gif') -91px -45px;
+}
+</style>
+
+
   
 <head>
+  body {background-color: powderblue;}
 <title>Žuta boja</title>
 <style>
 table {
@@ -118,6 +169,13 @@ tr:nth-child(even) {
 <h2>Dobrodošli na Žuti web-shop</h2>
 
 
+  <ul id="navlist">
+  <li id="home"><a href="default.asp"></a></li>
+  <li id="prev"><a href="css_intro.asp"></a></li>
+  <li id="next"><a href="css_syntax.asp"></a></li>
+</ul>
+  
+  
   <div class="gallery">
   <a target="_blank" href="img_5terre.jpg">
     <img src="https://s3.eu-central-1.amazonaws.com/cnj-img/images/Ql/Qla0E7GJohxL"alt="gumica" width="250" height="250">
@@ -235,6 +293,7 @@ tr:nth-child(even) {
 <img id="drag1" src="https://s3.eu-central-1.amazonaws.com/cnj-img/images/Ql/Qla0E7GJohxL" width="250" height="250" draggable="true" ondragstart="drag(event)" width="250" height="250">
     </div>
 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
   <img id="drag1" src="https://www.neco-hobbyart.hr/images/stories/virtuemart/product/FABER-CASTELL/187101.jpg" width="250" height="250" draggable="true" ondragstart="drag(event)" width="250" height="250">
  </div>
