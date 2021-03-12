@@ -181,7 +181,9 @@ function drop(ev) {
 
   
 <head>
-  
+  <html2pdf page-size="A4" orientation="Portrait" dpi="300" margin-bottom="30mm" margin-top="10mm" lowquality="yes" grayscale="no" zoom="0" disable-smart-shrinking="0" />
+    <meta charset="utf-8" />
+   
 <title>Žuta boja</title>
 <style>
 table {
@@ -209,7 +211,28 @@ tr:nth-child(even) {
 <body>
                         
                           
+ <section id="podaci-glava">
+                       <p id="podaci-stranka">
+                               <strong><data bookmark="KupacNaziv">Ivan Horvat</data></strong>
+                               <dataSection bookmark="KupacNaziv2" removeEmpty="true"><strong><br><data>Tvrtka d.o.o.</data></strong></dataSection>
+                               <dataSection bookmark="KupacUlica" removeEmpty="true"><br><data>Zagrebačka 32</data></dataSection>
+                               <br><data bookmark="xmlBookmarkKupecPosta">10000</data>
+                               <data bookmark="xmlBookmarkKupecKraj">Zagreb</data>
+                               <br><br><dataSection bookmark="KupacOibIliPdvIDBroj" removeEmpty="true">OIB / PDV ID broj: <data>123456789</data></dataSection>
+                       </p>
 
+                       <p id="podaci-racun">
+                               <strong>Račun br.: <data bookmark="BrojDokumenta">01-0001-1</data></strong>
+                               <br><br><data bookmark="MjestoIzdavanjaDokumenata">Zagreb</data>, dana:
+                               <data bookmark="DatumIVrijemeIzdavanjaRacuna">13/03/2017 10:52</data>
+                               <br>Dospijeće: <data bookmark="DatumDospijeca">27/03/2017</data>
+                               <br>Datum isporuke: <data bookmark="DatumPrometa">01/03/2017</data>
+                               <br><br>Način plaćanja: <data bookmark="NacinPlacanja">gotovina</data>
+                               <br>TRR: <data bookmark="TRR">12345-67890</data>
+                               <br>Poziv na broj: <data bookmark="PozivNaBroj">123-4567</data>
+                       </p>
+                       <div class="clr"></div>
+               </section>
   
   
   
