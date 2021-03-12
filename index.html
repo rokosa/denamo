@@ -234,6 +234,101 @@ tr:nth-child(even) {
                        <div class="clr"></div>
                </section>
   
+   
+   <dataSection bookmark="KupacDrzavaSamoStrane" removeEmpty="true">
+       <dataSection2 bookmark="KupacDrzava" removeEmpty="true">
+               <data bookmark="KupacDrzava">Austrija</data>
+       </dataSection2>
+   </dataSection>
+   
+   <dataSection bookmark="NovcanaValuta" showOnValue="HRK">
+       <data bookmark="UkupnoZaPlacanjeSlovima">stopedeset</data>
+   </dataSection>
+   
+   <dataTable bookmark="Stavke">
+       <table>
+       <tr>
+               <th>Poz.</th>
+               <th align="left">Vrsta robe - usluge</th>
+               <th>Kol.</th>
+               <th>JM</th>
+               <th align="right">Cijena bez PDV-a</th>
+               <th>Rab. %</th>
+               <th align="left">PDV %</th>
+               <th>Vrijednost bez PDV-a</th>
+       </tr>
+
+       <dataTableRow bookmark="Stavke">
+               <tr>
+                       <td><data bookmark="StavkePozicijaSTockom">1.</data></td>
+                       <td align="left"><data bookmark="StavkeOpis">Testni artikl</data></td>
+                       <td><data bookmark="StavkeKolicina">10,00</data></td>
+                       <td><data bookmark="StavkeJedinicaMjere">kom</data></td>
+                       <td align="right"><data bookmark="StavkeCijenaBezPDV">100,00</data></td>
+                       <td><data bookmark="StavkePopust">5</data></td>
+                       <td align="left"><data bookmark="StavkeStopaPDV">25</data>%</td>
+                       <td><data bookmark="StavkeIznosBezPDV">1050,00</data></td>
+               </tr>
+       </dataTableRow>
+
+       <dataSample>
+               <tr>
+                       <td>2</td>
+                       <td>Drugi artikl</td>
+                       <td>15</td>
+                       <td>kom</td>
+                       <td>114,162</td>
+                       <td>19</td>
+                       <td>193,687</td>
+                       <td>150,471</td>
+               </tr>
+               <tr>
+                       <td>3</td>
+                       <td>Zadnji artikl u tablici</td>
+                       <td>5</td>
+                       <td>kom</td>
+                       <td>155,450</td>
+                       <td>11</td>
+                       <td>131,949</td>
+                       <td>100,868</td>
+               </tr>
+       </dataSample>
+</table>
+</dataTable>
+   <div id="barcode">
+  <img bookmark="BarkodZaPlacanje">
+</div>
+   
+   <div id="total-domestic">
+       <table>
+               <tr>
+                       <td>Kontrolna količina:</td>           
+                       <td><data bookmark="KontrolnaKolicina">1,00</data></td>
+               </tr>
+               <tr>
+                       <td>Rekapitulacija PDV-a:</td>          
+                       <td>HRK</td>            
+               </tr>
+               <tr>
+                       <td>Ukupni iznos bez PDV-a:</td>        
+                       <td><data bookmark="UkupnoBezPDV">100,00</data></td>    
+               </tr>
+               <tr>
+                       <td>Osnovica 25%:</td>          
+                       <td><data bookmark="OsnovaPDV2UDomVal">100,00</data></td>       
+               </tr>
+               <tr>
+                       <td>PDV 25%:</td>       
+                       <td><data bookmark="IznosPDV2UDomVal">25,00</data></td>
+               </tr>
+               <tr>
+                       <td>Za uplatu HRK:</td>         
+                       <td><data bookmark="UkupnoZaUplatuUDomVal">125,00</data></td>   
+               </tr>
+       </table>
+</div>
+   
+   
   
   
   
