@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
-   
+   <style>
+                       #currencyPlaceHolder{
+                               position: absolute;
+                               top: -10000px;
+                               left: -10000px;
+                       }
+               </style>
   <style>
 #container {
   width: 400px;
@@ -203,7 +209,29 @@ tr:nth-child(even) {
 }
 </style>
   
-  
+  <script type="text/javascript">
+       function toggleTotalsRecapitulation(){
+               var currencyPlaceHolder = document.getElementById("currencyPlaceHolder");
+               if(currencyPlaceHolder){
+                       var totalDomestic = document.getElementById("total-domestic");
+                       var totalForeign = document.getElementById("total-foreign");
+
+                       if(currencyPlaceHolder.innerText  == "HRK"){
+                               totalDomestic.style.display = "initial";
+
+                               if(totalForeign){
+                                       totalForeign.style.display = "none";
+                               }
+                       }
+                       else{
+                               totalForeign.style.display = "initial";
+                               if(totalDomestic){
+                                       totalDomestic.style.display = "none";
+                               }
+                       }
+               }
+       }
+</script>
   
   
   
@@ -328,7 +356,40 @@ tr:nth-child(even) {
        </table>
 </div>
    
-   
+   <div id="total-foreign" style="display: none;">
+       <table>
+               <tr>
+                       <td></td>
+                       <td>HRK</td>
+                       <td><data bookmark="NovcanaValuta"></data></td>
+               </tr>
+               <tr>
+                       <td>Ukupni iznos bez PDV-a:</td>        
+                       <td><data bookmark="UkupnoBezPDVUDomVal">65,02</data></td>      
+                       <td><data bookmark="UkupnoBezPDV">8,77</data></td>
+               </tr>
+               <tr>
+                       <td>Osnovica 25%:</td>          
+                       <td><data bookmark="OsnovaPDV2UDomVal">65,02</data></td>
+                       <td><data bookmark="OsnovaPDV2">8,77</data></td>        
+               </tr>
+               <tr>
+                       <td>PDV 25%:</td>               
+                       <td><data bookmark="IznosPDV2UDomVal">16,24</data></td>
+                       <td><data bookmark="IznosPDV2">2,19</data></td>
+               </tr>
+               <tr>
+                       <td>Za uplatu:</td>             
+                       <td><data bookmark="UkupnoZaUplatuUDomVal">81,25</data></td>    
+                       <td><data bookmark="UkupnoZaUplatu">10,96</data></td>
+               </tr>
+       </table>
+</div>
+   <body onLoad="toggleTotalsRecapitulation();">
+<div id="currencyPlaceHolder">
+       <data bookmark="NovcanaValuta"></data>
+</div>
+...
   
   
   
